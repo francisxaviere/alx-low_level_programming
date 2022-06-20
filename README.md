@@ -1,1 +1,1 @@
-My first readme for C
+C language directory
