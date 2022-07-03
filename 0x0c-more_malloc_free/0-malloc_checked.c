@@ -1,16 +1,17 @@
-#ifndef _MAIN_H
-#define _MAIN_H
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-void *malloc_checked(unsigned int b);
-char *string_nconcat(char *s1, char *s2, unsigned int n);
-void *_calloc(unsigned int nmemb, unsigned int size);
-int *array_range(int min, int max);
-int _putchar(char c);
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
-int _strlen(char *);
-char *_memset(char *s, char b, unsigned int n);
-char *_memcpy(char *dest, char *src, unsigned int n);
-int onlyNumbers(char *c);
-void multiply(char* s1, char* s2);
+/**
+* malloc_checked - function that allocates memory using malloc
+* @b: length
+* Return: none
+*/
+void *malloc_checked(unsigned int b)
+{
+	void *ptr = malloc(b);
 
-#endif
+	if (ptr == NULL)
+		exit(98);
+	return (ptr);
+}
